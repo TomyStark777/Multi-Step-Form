@@ -1,0 +1,30 @@
+body {
+    background-color: hsl(206, 94%, 87%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        background-color: white;
+        border-radius: 10px;
+
+        .sidebar {
+            background: url(assets/images/bg-sidebar-desktop.svg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+            ol {
+                list-style-type: none;
+
+                li {
+                    padding: 5vh;
+                    border: 2px;
+                }
+            }
+        }
+
+    }
+
+}
