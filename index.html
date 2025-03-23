@@ -1,54 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" url="https://fonts.google.com/specimen/Ubuntu">
   <title>Frontend Mentor | Multi-step form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="sidebar">
+      <img src="assets/images/bg-sidebar-desktop.svg" alt="">
       <ol>
         <li>
           <div class="number">1</div>
-          <div class="step"><span>STEP 1</span><span>YOUR INFO</span></div>
+          <div class="step"><span>Step 1</span><span>Your Plan</span></div>
         </li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          <div class="number">2</div>
+          <div class="step"><span>Step 2</span><span>Select Plan</span></div>
+        </li>
+        <li>
+          <div class="number">3</div>
+          <div class="step"><span>Step 3</span><span>Add-ons</span></div>
+        </li>
+        <li>
+          <div class="number">4</div>
+          <div class="step"><span>Step 4</span><span>Summary</span></div>
+        </li>
       </ol>
+    </div>
+    <div class="form-container">
+      <form>
+        <div class="step">
+          <div class="info-step">
+            <h1>Personal info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+          </div>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+
+
     </div>
   </div>
 
-  <!-- Sidebar start -->
 
-  
-  Your info
-
-  Step 2
-  Select plan
-
-  Step 3
-  Add-ons
-
-  Step 4
-  Summary
-
-  <!-- Sidebar end -->
-
-  <!-- Step 1 start -->
-
-  Personal info
-  Please provide your name, email address, and phone number.
 
   Name
   e.g. Stephen King
@@ -125,15 +150,16 @@
 
   Thank you!
 
-  Thanks for confirming your subscription! We hope you have fun 
-  using our platform. If you ever need support, please feel free 
+  Thanks for confirming your subscription! We hope you have fun
+  using our platform. If you ever need support, please feel free
   to email us at support@loremgaming.com.
 
   <!-- Step 5 end -->
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Timothée Klaus</a>.
   </div>
 </body>
+
 </html>

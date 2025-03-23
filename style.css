@@ -1,30 +1,98 @@
+
+
 body {
-    background-color: hsl(206, 94%, 87%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: hsl(206, 94%, 87%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Ubuntu-Regular', sans-serif;
+
+  .container {
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    width: 60vw;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
 
-    .container {
-        background-color: white;
-        border-radius: 10px;
 
-        .sidebar {
-            background: url(assets/images/bg-sidebar-desktop.svg);
-            background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
+    .sidebar {
+      position: relative;
 
-            ol {
-                list-style-type: none;
+      
 
-                li {
-                    padding: 5vh;
-                    border: 2px;
-                }
-            }
+      ol {
+        list-style-type: none;
+        position: absolute;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        top: 5%;
+        left: 0;
+        z-index: 10;
+
+        li {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          letter-spacing: 1px;
+          font-size: 14px;
+
+
+          span:nth-child(1) {
+            font-family: 'Ubuntu-Bold', sans-serif;
+            font-weight: lighter;
+            color: hsl(229, 24%, 87%);
+          }
+
+          .number {
+            background-color: hsl(206, 94%, 87%);
+            color: black;
+            font-family: 'Ubuntu-Light', sans-serif;
+            font-weight: bold;
+            clip-path: circle();
+            padding: .7vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+          }
+
+          .step {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+          }
         }
-
+      }
     }
+    .form-container{
+        border: 2px solid red;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
+      }
+
+      form{
+        .step{
+          .info-step{
+            h1{
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: hsl(213, 96%, 18%);
+            }
+          }
+        }
+      }
+  }
 }
