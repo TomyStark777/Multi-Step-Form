@@ -65,16 +65,16 @@ body {
           }
 
           .number {
-            background-color: hsl(206, 94%, 87%);
-            color: black;
+            border: 2px solid hsl(206, 94%, 87%);
+            color: hsl(206, 94%, 87%);
             font-family: "Ubuntu-Bold", sans-serif;
             font-weight: bold;
-            clip-path: circle();
-            padding: 0.7vw;
+            border-radius: 50%;
+            padding: .75vw 1vw;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: large;
+            font-size: 1rem;
           }
 
           .step {
@@ -86,19 +86,23 @@ body {
         }
       }
     }
+
     .form-container {
       border: 2px solid red;
       width: 100%;
       height: 100%;
       display: flex;
       padding-top: 3%;
+      position: relative;
       box-sizing: border-box;
       flex-direction: column;
       align-items: center;
       gap: 20px;
 
       form {
-        .step {
+        .step-container {
+          display: none;
+
           .info-step {
             h1 {
               font-family: "Ubuntu", sans-serif;
@@ -112,6 +116,8 @@ body {
             border: 2px solid green;
             box-sizing: border-box;
 
+
+
             input {
               width: 100%;
               padding: 10px;
@@ -121,6 +127,7 @@ body {
               font-size: 1rem;
               color: hsl(0, 0%, 50%);
               letter-spacing: 0.5px;
+              box-sizing: border-box;
             }
 
             label {
@@ -131,9 +138,136 @@ body {
             }
           }
         }
+
+        .button-group {
+          display: flex;
+          gap: 10px;
+          justify-content: space-between;
+          position: absolute;
+          left: 5vw;
+          right: 5vw;
+          bottom: 0;
+          padding: 3vh;
+
+          #retour {
+            background-color: transparent;
+            color: hsl(231, 11%, 63%);
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+          }
+
+          #suivant {
+            background-color: hsl(213, 96%, 18%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 1vw 1.5vw;
+            border-radius: 8px;
+          }
+
+        }
+
+        .step-2 {
+
+          .form-group {
+            position: relative;
+
+            .card {
+              width: 25%;
+              padding: 15px;
+              border: 2px solid transparent;
+              border-radius: 10px;
+              background-color: #f8f9fe;
+              cursor: pointer;
+              transition: border 0.3s ease-in-out;
+
+              input{
+                display: none;
+              }
+            }
+
+            .card:hover {
+              border-color: #635dff;
+            }
+
+            img {
+              width: 3vw;
+              margin-bottom: 2.5vh;
+            }
+
+            label {
+              display: block;
+              font-weight: bold;
+              color: #05224a;
+              margin-top: 10px;
+              font-size: 16px;
+            }
+
+            p {
+              color: #888;
+              font-size: 14px;
+              margin: 5px 0 0;
+            }
+
+            .abonnement {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              margin-top: 1vw;
+              height: 5vh;
+              padding: 0;
+              position: relative;
+
+              p{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+
+
+          }
+        }
       }
     }
   }
 }
 
+#duration {
+  width: 3em;
+  height: 1.5em;
+  appearance: none;
+  border-radius: 1rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  background: hsl(213, 96%, 18%);
 
+}
+
+input[type="checkbox"]::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 17px;
+  height: 17px;
+  background-color: rgba(255, 255, 255, 0.897);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: left .3s;
+}
+
+input[type="checkbox"]:checked {}
+
+input[type="checkbox"]:checked::after {
+  left: 75%
+}
