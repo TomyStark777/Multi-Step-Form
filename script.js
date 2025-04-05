@@ -43,7 +43,7 @@ plans.forEach((plan, index) => {
     plan.addEventListener("click", () => {
         plans.forEach(plan => {
             plan.style.backgroundColor = "transparent";
-            plan.style.border = "2px solid transparent"
+            plan.style.border = "2px solid hsl(229, 24%, 87%)"
         });
         plan.style.backgroundColor = "#433dff1a";
         plan.style.border = "2px solid #423dff";
